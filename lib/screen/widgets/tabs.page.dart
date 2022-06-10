@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:mobile_global_solution/screen/pages/register.page.dart';
+
+class TabsPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFFCFCFF),
+      body: TabBarView(
+        children: [
+          RegisterPage(),
+        ],
+      ),
+      bottomNavigationBar: new TabBar(
+        tabs: [
+          Tab(
+            icon: new Icon(Icons.dashboard_outlined),
+          ),
+          Tab(
+            icon: new Icon(Icons.create),
+          ),
+        ],
+        labelColor: Theme.of(context).primaryColor,
+        unselectedLabelColor: Colors.black38,
+        indicatorSize: TabBarIndicatorSize.label,
+        indicatorColor: Theme.of(context).primaryColor,
+      ),
+    );
+  }
+}
